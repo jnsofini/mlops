@@ -162,3 +162,5 @@ cython_debug/
 
 # Remove data files for now
 *.parquet
+
+.DS_Store
