@@ -1,0 +1,2 @@
+notebooks/*.ipynb filter=remove-notebook-output
+*/refactored/*.ipynb filter=remove-notebook-output
