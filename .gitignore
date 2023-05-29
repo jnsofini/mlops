@@ -1,6 +1,14 @@
 # Things to uncomment at the end
 # ----------------
 fonts
+mlflow-server-aws
+data
+HW
+artifacts_store
+models
+*/refactored/etl
+infrastructure
+*.pkl
 # ------------------------------------
 
 # Byte-compiled / optimized / DLL files
