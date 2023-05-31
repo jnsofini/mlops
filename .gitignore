@@ -9,6 +9,9 @@ models
 */refactored/etl
 infrastructure
 *.pkl
+artifacts
+output
+wandb
 # ------------------------------------
 
 # Byte-compiled / optimized / DLL files
