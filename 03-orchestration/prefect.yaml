@@ -16,3 +16,5 @@ pull:
     repository: git@github.com:jnsofini/mlops.git
     branch: feature/chapter3
     access_token: null
+- prefect.projects.steps.set_working_directory:
+    directory: /opt/prefect/03-orchestration
