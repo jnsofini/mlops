@@ -1,0 +1,11 @@
+deployments:
+- name: nyc_taxi_local_data_mlops
+  description: Deployment of NYC Taxi model development
+  entrypoint: 03-orchestration/3.4/orchestrate.py:main_flow
+  work_pool:
+    name: mlops
+- name: nyc_taxi_s3_data_mlops
+  description: Deployment of NYC Taxi model development
+  entrypoint: 03-orchestration/3.5/orchestrate.py:main_flow_s3
+  work_pool:
+    name: mlops
