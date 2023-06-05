@@ -108,11 +108,12 @@ def train_best_model(
         mlflow.xgboost.log_model(booster, artifact_path="models_mlflow")
     return None
 
-
+    # train_path: str = "./data/raw_data/green_tripdata_2022-01.parquet",
+    # val_path: str = "./data/raw_data/green_tripdata_2022-02.parquet",
 @flow
 def main_flow(
-    train_path: str = "../data/raw_data/green_tripdata_2022-01.parquet",
-    val_path: str = "../data/raw_data/green_tripdata_2022-02.parquet",
+    train_path: str = "green_tripdata_2022-01.parquet",
+    val_path: str = "green_tripdata_2022-02.parquet",
 ) -> None:
     """The main training pipeline"""
 
@@ -121,8 +122,9 @@ def main_flow(
     mlflow.set_experiment("nyc-taxi-experiment")
 
     # Load
-    df_train = read_data(train_path)
-    df_val = read_data(val_path)
+    BASE_URL = f"https://d37ci6vzurychx.cloudfront.net/trip-data"
+    df_train = read_data(f"{BASE_URL}/{train_path}")
+    df_val = read_data(f"{BASE_URL}/{val_path}")
 
     # Transform
     X_train, X_val, y_train, y_val, dv = add_features(df_train, df_val)
