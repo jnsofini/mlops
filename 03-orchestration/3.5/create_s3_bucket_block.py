@@ -4,7 +4,7 @@ import settings
 from pathlib import Path
 
 def get_config():
-    config = settings.load_env_vars(root_dir=Path(__file__).parent)
+    config = settings.load_env_vars(root_dir=Path(__file__).parent.parent)
     return config
 
 def create_aws_creds_block(aws_access_key_id: str, aws_secret_access_key: str):
