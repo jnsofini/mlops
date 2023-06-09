@@ -101,3 +101,23 @@ We can set parameters by selecting custom rum on the UI. That way you can change
  prefect profile use local
  prefect config set PREFECT_API_URL='http://127.0.0.1:4200/api'
  ```
+
+ ## Automated Notification
+
+Prefect offers several [automation recipies](https://docs.prefect.io/2.10.12/cloud/automations/) for workflows.
+It’s often helpful to be notified when something with your dataflow doesn’t work
+as planned. Let's create an email notification for to use with your own Prefect server instance.
+In your virtual environment, install the prefect-email integration with 
+
+```bash
+pip install prefect-email
+```
+
+Make sure you are connected to a running Prefect server instance through your
+Prefect profile.
+See the docs if needed: https://docs.prefect.io/latest/concepts/settings/#configuration-profiles
+
+To register the new block with your server 
+ - Notifications 
+ - Select the state of choice
+ 
