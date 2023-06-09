@@ -1,4 +1,10 @@
-Setup the environment and start a local prefect server via `prefect server start`
+# Setup the environment
+
+To get started we can start a __local prefect server__ via
+
+```sh
+prefect server start
+```
 
 In the terminal to run the code run `prefect config set PREFECT_API_URL=http://127.0.0.1:4200/api`
 
@@ -34,6 +40,12 @@ and this sends deployment to server. At this point nothing is running, the orche
 
 ```sh
  prefect worker start --pool 'zoompool'
+ ```
+
+ if you had not created this process workpool you could use
+
+ ```sh
+ prefect worker start --pool 'zoompool' -t process
  ```
 
  After setting this up we encountered an error. However, when we run simply `python 3.4/orchstrate.py` we get the result. After some thoughts the error might be coming because we don not have the data present on github.
@@ -80,3 +92,32 @@ We can set parameters by selecting custom rum on the UI. That way you can change
  To change profile I used `prefect profile create dev` and to  with `prefect profile ls` you see default and dev. To select dev `prefect proforile use dev` and with login, it takes you to the prefect cloud as this is a cloud base account.  Navigating to the root and running `prefect deploy --all`, the two deployments are deloyed to prefect cloud. The I created a process `prefect worker start -p mlops -t process` and could trigger it from the cloud UI. Next I set some automation where I created an even to sent an email when task completes. There are multiple options to take from including flow entering _pending, failed_ etc.
 
  Another way to see details is via `prefect version`
+
+
+ Setting up a profile called _local_
+
+ ```sh
+ prefect profile create local
+ prefect profile use local
+ prefect config set PREFECT_API_URL='http://127.0.0.1:4200/api'
+ ```
+
+ ## Automated Notification
+
+Prefect offers several [automation recipies](https://docs.prefect.io/2.10.12/cloud/automations/) for workflows.
+It’s often helpful to be notified when something with your dataflow doesn’t work
+as planned. Let's create an email notification for to use with your own Prefect server instance.
+In your virtual environment, install the prefect-email integration with 
+
+```bash
+pip install prefect-email
+```
+
+Make sure you are connected to a running Prefect server instance through your
+Prefect profile.
+See the docs if needed: https://docs.prefect.io/latest/concepts/settings/#configuration-profiles
+
+To register the new block with your server 
+ - Notifications 
+ - Select the state of choice
+ 

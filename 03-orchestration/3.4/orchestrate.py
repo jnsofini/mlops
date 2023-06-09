@@ -9,9 +9,11 @@ from sklearn.metrics import mean_squared_error
 import mlflow
 import xgboost as xgb
 from prefect import flow, task
+from prefect.artifacts import create_markdown_artifact
+from datetime import date
 
 
-@task(retries=3, retry_delay_seconds=2)
+@task(retries=3, retry_delay_seconds=2, name="Read taxi data")
 def read_data(filename: str) -> pd.DataFrame:
     """Read data into DataFrame"""
     df = pd.read_parquet(filename)
@@ -30,7 +32,7 @@ def read_data(filename: str) -> pd.DataFrame:
     return df
 
 
-@task
+@task(name="Add futures to dataframe")
 def add_features(
     df_train: pd.DataFrame, df_val: pd.DataFrame
 ) -> tuple(
@@ -106,6 +108,24 @@ def train_best_model(
         mlflow.log_artifact("models/preprocessor.b", artifact_path="preprocessor")
 
         mlflow.xgboost.log_model(booster, artifact_path="models_mlflow")
+    
+        markdown__rmse_report = f"""# RMSE Report
+
+        ## Summary
+
+        Duration Prediction 
+
+        ## RMSE XGBoost Model
+
+        | Region    | RMSE |
+        |:----------|-------:|
+        | {date.today()} | {rmse:.2f} |
+        """
+
+        create_markdown_artifact(
+            key="duration-model-report", markdown=markdown__rmse_report
+        )
+    
     return None
 
     # train_path: str = "./data/raw_data/green_tripdata_2022-01.parquet",
