@@ -1,6 +1,6 @@
 ## Getting the model for deployment from MLflow
 
-* Take the code from the previous video
+* Take the code from the [web service](../web-service-mlflow/) section
 * Train another model, register with MLflow
 * Put the model into a scikit-learn pipeline
 * Model deployment with tracking server
