@@ -1,27 +1,28 @@
 import os
 import pickle
-
+import prepare
 import mlflow
 from flask import Flask, request, jsonify
 
 
-BUCKET = "moose-solutions-mlops-registry"
-RUN_ID = os.getenv(
-    'RUN_ID', 
-    "1dfce710dc824ecab012f7d910b190f6"
-    )
-EXPERIMENT_ID = os.getenv('RUN_ID', 1)
+# BUCKET = "moose-solutions-mlops-registry"
+# RUN_ID = os.getenv(
+#     'RUN_ID', 
+#     "1dfce710dc824ecab012f7d910b190f6"
+#     )
+# EXPERIMENT_ID = os.getenv('RUN_ID', 1)
 
-logged_model = f's3://{BUCKET}/{EXPERIMENT_ID}/{RUN_ID}/artifacts/model'
-# logged_model = f'runs:/{RUN_ID}/model'
-model = mlflow.pyfunc.load_model(logged_model)
+# logged_model = f's3://{BUCKET}/{EXPERIMENT_ID}/{RUN_ID}/artifacts/model'
+# # logged_model = f'runs:/{RUN_ID}/model'
+# model = mlflow.pyfunc.load_model(logged_model)
 
+model = prepare.load_model()
 
-def prepare_features(ride):
-    features = {}
-    features['PU_DO'] = '%s_%s' % (ride['PULocationID'], ride['DOLocationID'])
-    features['trip_distance'] = ride['trip_distance']
-    return features
+# def prepare_features(ride):
+#     features = {}
+#     features['PU_DO'] = '%s_%s' % (ride['PULocationID'], ride['DOLocationID'])
+#     features['trip_distance'] = ride['trip_distance']
+#     return features
 
 
 def predict(features):
@@ -36,9 +37,10 @@ app = Flask('duration-prediction')
 def predict_endpoint():
     ride = request.get_json()
 
-    features = prepare_features(ride)
+    features = prepare.prepare_features(ride)
     pred = predict(features)
 
+    RUN_ID = os.getenv('RUN_ID', "1dfce710dc824ecab012f7d910b190f6")
     result = {
         'duration': pred,
         'model_version': RUN_ID
