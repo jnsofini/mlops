@@ -24,7 +24,7 @@ from sklearn.metrics import mean_squared_error
 from sklearn.pipeline import make_pipeline
 
 BUCKET = "moose-solutions-mlops-registry"
-SCORE_BUCKET = os.getenv("SCORE_BUCKET", "moose-solutions")
+SCORE_BUCKET = os.getenv("SCORE_BUCKET", "moose-solutions-mlops-learning")
 SUB_DIR = "mlops-zoomcamp"
 
 def generate_uuids(n):
@@ -105,7 +105,7 @@ def get_paths(run_date, taxi_type, run_id):
 
     input_file = f"https://d37ci6vzurychx.cloudfront.net/trip-data/{taxi_type}_tripdata_{year:04d}-{month:02d}.parquet"
     # output_file = f's3://bucket-name/taxi_type={taxi_type}/year={year:04d}/month={month:02d}/{run_id}.parquet'
-    output_file = f"s3://{BUCKET}/{SUB_DIR}/taxi_type={taxi_type}-year={year:04d}-month={month:02d}-{run_id}.parquet'"
+    output_file = f"s3://{SCORE_BUCKET}/taxi_type={taxi_type}-year={year:04d}-month={month:02d}-{run_id}.parquet"
 
     return input_file, output_file
 
