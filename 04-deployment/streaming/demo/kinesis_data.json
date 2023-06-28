@@ -1,0 +1,164 @@
+{
+    "Records": [
+        {
+            "kinesis": {
+                "kinesisSchemaVersion": "1.0",
+                "partitionKey": "1",
+                "sequenceNumber": "49641688281245081145523285723829832001376168680412413954",
+                "data": "eyJkZXZpY2VfbmFtZSI6ICJkZW1vX3NlbnNvcmUiLCAidGVtcGVyYXR1ZSI6IDE2LCAidGltZSI6ICIyMDIzLTA2LTEzIDE1OjE5OjA1LjkyMjEyMiJ9",
+                "approximateArrivalTimestamp": 1686691145.968
+            },
+            "eventSource": "aws:kinesis",
+            "eventVersion": "1.0",
+            "eventID": "shardId-000000000000: 49641688281245081145523285723829832001376168680412413954",
+            "eventName": "aws:kinesis:record",
+            "invokeIdentityArn": "arn:aws:iam: : XXXXXXXXXX:role/lambda-kinesis-role",
+            "awsRegion": "us-west-2",
+            "eventSourceARN": "arn:aws:kinesis:us-west-2: XXXXXXXXXX:stream/demo-temperature"
+        },
+        {
+            "kinesis": {
+                "kinesisSchemaVersion": "1.0",
+                "partitionKey": "1",
+                "sequenceNumber": "49641688281245081145523285723831040927195783309587120130",
+                "data": "eyJkZXZpY2VfbmFtZSI6ICJkZW1vX3NlbnNvcmUiLCAidGVtcGVyYXR1ZSI6IDE3LCAidGltZSI6ICIyMDIzLTA2LTEzIDE1OjE5OjA1Ljk5MjcxNyJ9",
+                "approximateArrivalTimestamp": 1686691146.026
+            },
+            "eventSource": "aws:kinesis",
+            "eventVersion": "1.0",
+            "eventID": "shardId-000000000000: 49641688281245081145523285723831040927195783309587120130",
+            "eventName": "aws:kinesis:record",
+            "invokeIdentityArn": "arn:aws:iam: : XXXXXXXXXX:role/lambda-kinesis-role",
+            "awsRegion": "us-west-2",
+            "eventSourceARN": "arn:aws:kinesis:us-west-2: XXXXXXXXXX:stream/demo-temperature"
+        },
+        {
+            "kinesis": {
+                "kinesisSchemaVersion": "1.0",
+                "partitionKey": "1",
+                "sequenceNumber": "49641688281245081145523285723832249853015397938761826306",
+                "data": "eyJkZXZpY2VfbmFtZSI6ICJkZW1vX3NlbnNvcmUiLCAidGVtcGVyYXR1ZSI6IDE2LCAidGltZSI6ICIyMDIzLTA2LTEzIDE1OjE5OjA2LjA0OTA3NCJ9",
+                "approximateArrivalTimestamp": 1686691146.08
+            },
+            "eventSource": "aws:kinesis",
+            "eventVersion": "1.0",
+            "eventID": "shardId-000000000000: 49641688281245081145523285723832249853015397938761826306",
+            "eventName": "aws:kinesis:record",
+            "invokeIdentityArn": "arn:aws:iam: : XXXXXXXXXX:role/lambda-kinesis-role",
+            "awsRegion": "us-west-2",
+            "eventSourceARN": "arn:aws:kinesis:us-west-2: XXXXXXXXXX:stream/demo-temperature"
+        },
+        {
+            "kinesis": {
+                "kinesisSchemaVersion": "1.0",
+                "partitionKey": "1",
+                "sequenceNumber": "49641688281245081145523285723833458778835012567936532482",
+                "data": "eyJkZXZpY2VfbmFtZSI6ICJkZW1vX3NlbnNvcmUiLCAidGVtcGVyYXR1ZSI6IDEyLCAidGltZSI6ICIyMDIzLTA2LTEzIDE1OjE5OjA2LjEwMzgwMiJ9",
+                "approximateArrivalTimestamp": 1686691146.133
+            },
+            "eventSource": "aws:kinesis",
+            "eventVersion": "1.0",
+            "eventID": "shardId-000000000000: 49641688281245081145523285723833458778835012567936532482",
+            "eventName": "aws:kinesis:record",
+            "invokeIdentityArn": "arn:aws:iam: : XXXXXXXXXX:role/lambda-kinesis-role",
+            "awsRegion": "us-west-2",
+            "eventSourceARN": "arn:aws:kinesis:us-west-2: XXXXXXXXXX:stream/demo-temperature"
+        },
+        {
+            "kinesis": {
+                "kinesisSchemaVersion": "1.0",
+                "partitionKey": "1",
+                "sequenceNumber": "49641688281245081145523285723834667704654627265830715394",
+                "data": "eyJkZXZpY2VfbmFtZSI6ICJkZW1vX3NlbnNvcmUiLCAidGVtcGVyYXR1ZSI6IDEyLCAidGltZSI6ICIyMDIzLTA2LTEzIDE1OjE5OjA2LjE1ODM3MyJ9",
+                "approximateArrivalTimestamp": 1686691146.19
+            },
+            "eventSource": "aws:kinesis",
+            "eventVersion": "1.0",
+            "eventID": "shardId-000000000000: 49641688281245081145523285723834667704654627265830715394",
+            "eventName": "aws:kinesis:record",
+            "invokeIdentityArn": "arn:aws:iam: : XXXXXXXXXX:role/lambda-kinesis-role",
+            "awsRegion": "us-west-2",
+            "eventSourceARN": "arn:aws:kinesis:us-west-2: XXXXXXXXXX:stream/demo-temperature"
+        },
+        {
+            "kinesis": {
+                "kinesisSchemaVersion": "1.0",
+                "partitionKey": "1",
+                "sequenceNumber": "49641688281245081145523285723835876630474241895005421570",
+                "data": "eyJkZXZpY2VfbmFtZSI6ICJkZW1vX3NlbnNvcmUiLCAidGVtcGVyYXR1ZSI6IDE5LCAidGltZSI6ICIyMDIzLTA2LTEzIDE1OjE5OjA2LjIxNjA3MCJ9",
+                "approximateArrivalTimestamp": 1686691146.251
+            },
+            "eventSource": "aws:kinesis",
+            "eventVersion": "1.0",
+            "eventID": "shardId-000000000000: 49641688281245081145523285723835876630474241895005421570",
+            "eventName": "aws:kinesis:record",
+            "invokeIdentityArn": "arn:aws:iam: : XXXXXXXXXX:role/lambda-kinesis-role",
+            "awsRegion": "us-west-2",
+            "eventSourceARN": "arn:aws:kinesis:us-west-2: XXXXXXXXXX:stream/demo-temperature"
+        },
+        {
+            "kinesis": {
+                "kinesisSchemaVersion": "1.0",
+                "partitionKey": "1",
+                "sequenceNumber": "49641688281245081145523285723837085556293856524180127746",
+                "data": "eyJkZXZpY2VfbmFtZSI6ICJkZW1vX3NlbnNvcmUiLCAidGVtcGVyYXR1ZSI6IDE5LCAidGltZSI6ICIyMDIzLTA2LTEzIDE1OjE5OjA2LjI3NjA1MCJ9",
+                "approximateArrivalTimestamp": 1686691146.308
+            },
+            "eventSource": "aws:kinesis",
+            "eventVersion": "1.0",
+            "eventID": "shardId-000000000000: 49641688281245081145523285723837085556293856524180127746",
+            "eventName": "aws:kinesis:record",
+            "invokeIdentityArn": "arn:aws:iam: : XXXXXXXXXX:role/lambda-kinesis-role",
+            "awsRegion": "us-west-2",
+            "eventSourceARN": "arn:aws:kinesis:us-west-2: XXXXXXXXXX:stream/demo-temperature"
+        },
+        {
+            "kinesis": {
+                "kinesisSchemaVersion": "1.0",
+                "partitionKey": "1",
+                "sequenceNumber": "49641688281245081145523285723838294482113471153354833922",
+                "data": "eyJkZXZpY2VfbmFtZSI6ICJkZW1vX3NlbnNvcmUiLCAidGVtcGVyYXR1ZSI6IDEyLCAidGltZSI6ICIyMDIzLTA2LTEzIDE1OjE5OjA2LjMzMzc0MCJ9",
+                "approximateArrivalTimestamp": 1686691146.367
+            },
+            "eventSource": "aws:kinesis",
+            "eventVersion": "1.0",
+            "eventID": "shardId-000000000000: 49641688281245081145523285723838294482113471153354833922",
+            "eventName": "aws:kinesis:record",
+            "invokeIdentityArn": "arn:aws:iam: : XXXXXXXXXX:role/lambda-kinesis-role",
+            "awsRegion": "us-west-2",
+            "eventSourceARN": "arn:aws:kinesis:us-west-2: XXXXXXXXXX:stream/demo-temperature"
+        },
+        {
+            "kinesis": {
+                "kinesisSchemaVersion": "1.0",
+                "partitionKey": "1",
+                "sequenceNumber": "49641688281245081145523285723839503407933085782529540098",
+                "data": "eyJkZXZpY2VfbmFtZSI6ICJkZW1vX3NlbnNvcmUiLCAidGVtcGVyYXR1ZSI6IDIwLCAidGltZSI6ICIyMDIzLTA2LTEzIDE1OjE5OjA2LjM5MDQwMyJ9",
+                "approximateArrivalTimestamp": 1686691146.42
+            },
+            "eventSource": "aws:kinesis",
+            "eventVersion": "1.0",
+            "eventID": "shardId-000000000000: 49641688281245081145523285723839503407933085782529540098",
+            "eventName": "aws:kinesis:record",
+            "invokeIdentityArn": "arn:aws:iam: : XXXXXXXXXX:role/lambda-kinesis-role",
+            "awsRegion": "us-west-2",
+            "eventSourceARN": "arn:aws:kinesis:us-west-2: XXXXXXXXXX:stream/demo-temperature"
+        },
+        {
+            "kinesis": {
+                "kinesisSchemaVersion": "1.0",
+                "partitionKey": "1",
+                "sequenceNumber": "49641688281245081145523285723840712333752700411704246274",
+                "data": "eyJkZXZpY2VfbmFtZSI6ICJkZW1vX3NlbnNvcmUiLCAidGVtcGVyYXR1ZSI6IDExLCAidGltZSI6ICIyMDIzLTA2LTEzIDE1OjE5OjA2LjQ0MzQwNCJ9",
+                "approximateArrivalTimestamp": 1686691146.474
+            },
+            "eventSource": "aws:kinesis",
+            "eventVersion": "1.0",
+            "eventID": "shardId-000000000000: 49641688281245081145523285723840712333752700411704246274",
+            "eventName": "aws:kinesis:record",
+            "invokeIdentityArn": "arn:aws:iam: : XXXXXXXXXX:role/lambda-kinesis-role",
+            "awsRegion": "us-west-2",
+            "eventSourceARN": "arn:aws:kinesis:us-west-2: XXXXXXXXXX:stream/demo-temperature"
+        }
+    ]
+}

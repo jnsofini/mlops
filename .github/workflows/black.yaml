@@ -9,5 +9,7 @@ jobs:
       - uses: psf/black@stable
         with:
           options: "--check --verbose"
-          src: "./src"
+          src: "./04-deployment/web-service"
           version: "~= 22.12"
+
+
