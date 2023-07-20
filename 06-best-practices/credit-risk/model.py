@@ -1,17 +1,16 @@
 import base64
 import json
 import os
+import pickle
+from io import BytesIO
 
 import boto3
 import mlflow
 import pandas as pd
 from optbinning import Scorecard
 from s3fs.core import S3FileSystem
-import pickle
-from io import BytesIO
 
 from config import col_map
-
 
 # def get_model_location(run_id):
 #     model_location = os.getenv('MODEL_LOCATION')
@@ -25,6 +24,7 @@ from config import col_map
 #     model_location = f's3://{model_bucket}/{experiment_id}/{run_id}/artifacts/model'
 #     return model_location
 
+
 def get_model_location(run_id=None, stage='dev'):
     model_location = os.getenv('MODEL_LOCATION')
 
@@ -36,6 +36,7 @@ def get_model_location(run_id=None, stage='dev'):
 
     model_location = f's3://{model_bucket}/scorecards/{stage}'
     return model_location
+
 
 def load_model_mlflow(run_id):
     model_path = get_model_location(run_id)
@@ -49,15 +50,28 @@ def load_model_mlflow(run_id):
 #     model = Scorecard.load(f"{model_path}/model.pkl")
 #     return model
 
-def load_model(run_id, stage='dev'):
+def load_model(run_id):
+    model_path = get_model_location(run_id=run_id)
+    if not model_path.startswith("s3://"):
+        return Scorecard.load(f"{model_path}/model.pkl")
     s3_file = S3FileSystem(
         anon=False,
         secret=os.getenv("AWS_SECRET_ACCESS_KEY"),
-        key=os.getenv("AWS_ACCESS_KEY_ID")
-        )
-    model_path = get_model_location(stage=stage)
+        key=os.getenv("AWS_ACCESS_KEY_ID"),
+    )
     model = pickle.load(s3_file.open(f"{model_path}/model.pkl"))
     return model
+
+# def load_model(run_id, stage='dev'):
+#     s3_file = S3FileSystem(
+#         anon=False,
+#         secret=os.getenv("AWS_SECRET_ACCESS_KEY"),
+#         key=os.getenv("AWS_ACCESS_KEY_ID"),
+#     )
+#     model_path = get_model_location(stage=stage)
+#     model = pickle.load(s3_file.open(f"{model_path}/model.pkl"))
+#     return model
+
 
 # def load_model(run_id):
 #     s3 = boto3.resource('s3')

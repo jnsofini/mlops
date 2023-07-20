@@ -2,16 +2,15 @@
 terraform {
   required_version = ">= 1.0"
   backend "s3" {
-    bucket  = "moose-solutions-terraform-remote-state"
+    bucket  = "tf-state-mlops-zoomcamp"
     key     = "mlops-zoomcamp-stg.tfstate"
-    region  = "us-west-2"
+    region  = "eu-west-1"
     encrypt = true
   }
 }
 
 provider "aws" {
   region = var.aws_region
-  profile = "mlops"
 }
 
 data "aws_caller_identity" "current_identity" {}

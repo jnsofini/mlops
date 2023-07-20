@@ -1,8 +1,22 @@
+# Chapter 6
+06-best-practices/code-*
+06-best-practices/credit-risk copy
+06-best-practices/credit-risk-start
+06-best-practices/credit-risk-refactor
+
+# Infrastructure specific
+
+01-intro/infrastructure
+
+capstone
+# Uncomment after chapter 5
+# 05-monitoring
+ayoub.md
 # Uncomment after chapter 4
-streaming
+streaming/demo
 # images
 thumbnail-*
-capstone
+capstone/notebooks
 setup
 # homework
 
@@ -16,7 +30,7 @@ HW
 artifacts_store
 models
 */refactored/etl
-infrastructure
+# infrastructure
 *.pkl
 artifacts
 output
