@@ -2,7 +2,7 @@
 terraform {
   required_version = ">= 1.0"
   backend "s3" {
-    bucket  = "tf-state-mlops-zoomcamp"
+    bucket  = "moose-solutions-terraform-remote-state"
     key     = "mlops-zoomcamp-stg.tfstate"
     region  = "us-west-2"
     encrypt = true
