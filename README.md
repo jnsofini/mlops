@@ -28,4 +28,4 @@ The technoloy stacks used in this course includes
 * [DVC](https://dvc.org/): Data version control - [article](https://mathdatasimplified.com/2023/02/20/introduction-to-dvc-data-version-control-tool-for-machine-learning-projects-2/)
 
 # Final capstone project:
-Full end-to-end Machine Learning pipeline project will be done. It is located at ...
+A full end-to-end Machine Learning pipeline project will be done. It is located at [reliable credit scoring repository](https://github.com/jnsofini/reliable-credit-scoring-system)
