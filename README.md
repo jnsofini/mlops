@@ -6,7 +6,7 @@ MLOPS training based on [MLOPS Zoomcamp course offered by DataTalks.Club](https:
  - Chapter 3: Orchestration by Biance and Jeff
  - Chapter 4: Model deployment by Alexey
  - Chapter 5: Monitoring by Emily Dral
- - ...
+ - Chapter 6: Best practices by Sejal and Alexey
 
 ## Tech Stacks
 
