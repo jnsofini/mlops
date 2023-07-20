@@ -15,6 +15,7 @@ build: quality_checks test
 integration_test: build
 	LOCAL_IMAGE_NAME=${LOCAL_IMAGE_NAME} bash integraton-test/run.sh
 
+# We are not really going to publish. Just mock
 publish: build integration_test
 	LOCAL_IMAGE_NAME=${LOCAL_IMAGE_NAME} bash scripts/publish.sh
 
