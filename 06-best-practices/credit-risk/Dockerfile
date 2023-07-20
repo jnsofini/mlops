@@ -8,7 +8,7 @@ COPY [ "Pipfile", "Pipfile.lock", "./" ]
 RUN pipenv install --system --deploy
 # Copying model as we haven't figured a way to read it.
 # COPY [ "model/model.pkl", "./" ]
-COPY model model
+# COPY model model
 COPY ["config.py", "model.py", "./" ]
 
 COPY ["lambda_function.py", "./" ]
