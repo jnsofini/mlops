@@ -1,6 +1,6 @@
 import requests 
 
-event = {
+event1 = {
     "Records": [
         {
             "kinesis": {
@@ -19,6 +19,27 @@ event = {
             "eventSourceARN": "arn:aws:kinesis:eu-west-1:387546586013:stream/ride_events"
         }
     ]
+}
+
+event = {
+  "Records": [
+    {
+      "kinesis": {
+        "kinesisSchemaVersion": "1.0",
+        "partitionKey": "1",
+        "sequenceNumber": "49641780686612885777013334990895985169291817671792263170",
+        "data": "ewogICAgICAgICJyaWRlIjogewogICAgICAgICAgICAiUFVMb2NhdGlvbklEIjogMTMwLAogICAgICAgICAgICAiRE9Mb2NhdGlvbklEIjogMjA1LAogICAgICAgICAgICAidHJpcF9kaXN0YW5jZSI6IDMuNjYKICAgICAgICB9LCAKICAgICAgICAicmlkZV9pZCI6IDE1NgogICAgfQ==",
+        "approximateArrivalTimestamp": 1686949874.47
+      },
+      "eventSource": "aws:kinesis",
+      "eventVersion": "1.0",
+      "eventID": "shardId-000000000000:49641780686612885777013334990895985169291817671792263170",
+      "eventName": "aws:kinesis:record",
+      "invokeIdentityArn": "arn:aws:iam::410605826834:role/lambda-kinesis-role",
+      "awsRegion": "us-west-2",
+      "eventSourceARN": "arn:aws:kinesis:us-west-2:410605826834:stream/ride_events"
+    }
+  ]
 }
 
 
